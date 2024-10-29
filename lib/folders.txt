@@ -1,0 +1,35 @@
+lib/
+├── main.dart                   # Uygulama giriş noktası
+├── core/                       # Uygulamanın genel ayarları ve sabitleri
+│   ├── theme/                  # Tema ile ilgili dosyalar
+│   │   ├── app_theme.dart      # Aydınlık/Karanlık tema yapılandırmaları
+│   │   └── theme_view_model.dart  # Tema ViewModel'i
+│   ├── constants/              # Sabitler
+│   │   └── app_constants.dart  # Sabit değerler (örneğin renkler, fontlar vb.)
+│   └── utils/                  # Yardımcı sınıflar ve fonksiyonlar
+│       └── helper_functions.dart
+├── data/                       # Veri yönetimi katmanı
+│   ├── models/                 # Veri modelleri
+│   │   ├── product_model.dart
+│   │   └── user_model.dart
+│   ├── repositories/           # Veri depoları (veri alma, gönderme işlemleri)
+│   │   ├── product_repository.dart
+│   │   └── user_repository.dart
+│   └── services/               # Servisler (API çağrıları vb.)
+│       └── api_service.dart
+├── view_models/                # Tüm ViewModel dosyaları
+│   ├── product_view_model.dart
+│   └── user_view_model.dart
+├── views/                      # Kullanıcı arayüzü dosyaları (ekranlar, widget'lar)
+│   ├── home/                   # Ana sayfa
+│   │   ├── home_screen.dart    # Ana sayfa ekranı
+│   │   └── home_view_model.dart
+│   ├── settings/               # Ayarlar sayfası
+│   │   ├── settings_screen.dart
+│   │   └── settings_view_model.dart
+│   ├── shared/                 # Ortak kullanılan widget'lar
+│   │   └── custom_button.dart
+│   └── auth/                   # Kimlik doğrulama ekranları (Giriş, Kayıt vb.)
+│       ├── login_screen.dart
+│       └── register_screen.dart
+└── app.dart                    # Ana uygulama sınıfı (MaterialApp yapılandırmaları)
