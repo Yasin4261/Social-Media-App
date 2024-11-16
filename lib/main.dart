@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'view_models/theme_view_model.dart';
 import 'view_models/bottom_nav_view_model.dart';
+import 'view_models/post_view_model.dart';
 
 import 'views/screens/home/home_screen.dart';
 import 'views/screens/search/search_screen.dart';
@@ -16,6 +17,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeViewModel()),
+        ChangeNotifierProvider(create: (_) => PostViewModel()),
         ChangeNotifierProvider(
             create: (_) => BottomNavViewModel([
                   HomeScreen(),
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Theme Demo',
+      title: 'Social Maker',
       theme: themeViewModel.currentTheme,
       home: MainScreen(),
     );
